@@ -23,9 +23,9 @@ const PostCard = ({ post }: Props) => {
         </div>
 
         {/* reacts and poster */}
-        <div className="grid grid-cols-[1fr,auto] items-center gap-1">
+        <div className="grid grid-flow-row md:grid-cols-[1fr,auto] items-center gap-1">
           <Reactions />
-          <h5 className="text-xs opacity-40 mt-1 text-right">
+          <h5 className="text-xs opacity-40 mt-1 md:text-right">
             Posted by Lorem Ipsum
           </h5>
         </div>

@@ -7,14 +7,14 @@ const SkeletonPostCard = () => {
       {/* post details */}
       <div className="grid grid-rows-[1fr,auto] gap-4">
         <div className="flex flex-col gap-2">
-          <div className="w-96 h-2 bg-gray-200 rounded-full"></div>
+          <div className="w-full lg:w-96 h-2 bg-gray-200 rounded-full"></div>
           <p className="w-full h-2 bg-gray-200 rounded-full lg:w-[700px]"></p>
         </div>
 
         {/* reacts and poster */}
         <div className="grid grid-cols-[1fr,auto] items-center gap-1">
-          <div className="w-40 h-2 bg-gray-200 rounded-full"></div>
-          <div className="w-28 h-2 bg-gray-200 rounded-full"></div>
+          <div className="w-32 lg:w-40 h-2 bg-gray-200 rounded-full"></div>
+          <div className="w-20 lg:w-28 h-2 bg-gray-200 rounded-full"></div>
         </div>
       </div>
     </div>

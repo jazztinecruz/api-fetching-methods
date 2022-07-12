@@ -1,3 +1,5 @@
+import Button from "./button"
+
 const AddPost = () => {
   return (
     <div className="grid grid-rows-[1fr,auto] gap-3">
@@ -11,9 +13,7 @@ const AddPost = () => {
       </div>
 
       <div className='ml-auto'>
-        <button className="text-white text-sm font-semibold tracking-wide bg-black py-2 px-6 rounded-md">
-          Post
-        </button>
+        <Button name="Post"/>
       </div>
     </div>
   )

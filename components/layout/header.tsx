@@ -12,6 +12,7 @@ const NavBar = () => {
         <NavLink name="CSR" url="/client-side-rendering"/>
         <NavLink name="SSR" url="/server-side-rendering"/>
         <NavLink name="SSG" url="/static-site-generation"/>
+        <NavLink name="ISR" url="/incremental-static-regeneration"/>
       </NavLinks>
     </nav>
   )

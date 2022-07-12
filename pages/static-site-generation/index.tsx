@@ -11,14 +11,12 @@ interface Props {
 const StaticSiteGeneration = ({ posts }: Props) => {
   return (
     <Layout>
-      <section className='grid gap-8'>
-        <AddPost/>
-        <div className="grid gap-3">
-          {posts!.map((post) => (
-            <PostCard key={post.id} post={post} />
-          ))}
-        </div>
-      </section>
+      <AddPost />
+      <div className="grid gap-3">
+        {posts!.map((post) => (
+          <PostCard key={post.id} post={post} />
+        ))}
+      </div>
     </Layout>
   )
 }

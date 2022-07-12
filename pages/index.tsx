@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const Home = () => {
   return (
     <Layout>
-      <section className="h-full grid justify-center items-center">
+      <div className="grid justify-center items-center">
         <div className="flex flex-col gap-6 text-center items-center">
           <h1 className="text-2xl lg:text-3xl font-black tracking-wider">
             Data Fetching Overview
@@ -24,7 +24,7 @@ const Home = () => {
             />
           </div>
         </div>
-      </section>
+      </div>
     </Layout>
   )
 }

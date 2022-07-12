@@ -1,0 +1,50 @@
+import { useEffect, useState } from 'react'
+import AddPost from '../../components/elements/add-post'
+import Layout from '../../components/layout'
+import PostCard from '../../components/section/post-card'
+import SkeletonPostCard from '../../components/section/skeletons/post-card'
+import Post from '../../helper/types/posts'
+
+const ClientSideRendering = () => {
+  const [posts, setPosts] = useState<Post[] | null>(null)
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+      const data = await response.json()
+      setPosts(data)
+    }
+    console.log(posts)
+    setTimeout(fetchPost, 1000)
+  }, [])
+
+  if (!posts) {
+    return (
+      <Layout>
+        <section className="grid gap-8">
+          <AddPost />
+          <div className="grid gap-3">
+            {Array.from({ length: 20 }, (_, index) => (
+              <SkeletonPostCard key={index} />
+            ))}
+          </div>
+        </section>
+      </Layout>
+    )
+  }
+
+  return (
+    <Layout>
+      <section className="grid gap-8">
+        <AddPost />
+        <div className="grid gap-3">
+          {posts!.map((post) => (
+            <PostCard key={post.id} post={post} />
+          ))}
+        </div>
+      </section>
+    </Layout>
+  )
+}
+
+export default ClientSideRendering

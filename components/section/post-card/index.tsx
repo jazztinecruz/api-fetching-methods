@@ -17,7 +17,7 @@ const PostCard = ({ post }: Props) => {
           <h3 className="font-semibold tracking-wide">
             {post.title[0].toUpperCase() + post.title.slice(1)}
           </h3>
-          <p className="text-xs leading-relaxed lg:w-[700px] opacity-60">
+          <p className="text-xs leading-relaxed opacity-60">
             {post.body}
           </p>
         </div>

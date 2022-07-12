@@ -6,7 +6,7 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <div className="h-screen grid grid-rows-[auto,1fr] gap-20">
+    <div className="h-screen grid grid-rows-[auto,1fr] gap-10">
       <header className='sticky top-0 z-50 py-4 px-6 bg-white shadow-md shadow-gray-200'>
         <NavBar />
       </header>
